@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-7">
+            <h5>Lista de Cobros</h5>
+            <table mat-table [dataSource]="niveles" class="text-left w-100">
+                <ng-container matColumnDef="cedula">
+                    <th mat-header-cell *matHeaderCellDef> Cédula </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="nombre">
+                    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="celular">
+                    <th mat-header-cell *matHeaderCellDef> Celular </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="monto">
+                    <th mat-header-cell *matHeaderCellDef> Monto </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="cobrador">
+                    <th mat-header-cell *matHeaderCellDef> Cobrador </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsLevel"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsLevel;"></tr>
+            </table>
+            <mat-paginator #paginator pageSize="5" showFirstLastButtons></mat-paginator>
+        </div>
+        <div class="col-5">
+            <h5>Pólizas por Caducar</h5>
+            <table mat-table [dataSource]="paralelos" class="text-left w-100">
+                <ng-container matColumnDef="cedula">
+                    <th mat-header-cell *matHeaderCellDef> Cédula </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="nombre">
+                    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="celular">
+                    <th mat-header-cell *matHeaderCellDef> Celular </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="fecha">
+                    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsParallel"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsParallel;"></tr>
+            </table>
+            <mat-paginator #paginator1 pageSize="5" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>
