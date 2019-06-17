@@ -1,7 +1,6 @@
 # Pagina realiza en Angular 7
 
-Adicional se usa angular material y bootstrap para Front End
-Se usa Firebase para Back End
+Adicional se usa angular material y bootstrap para Front End y se usa Firebase para Back End
 
 ## [Demo](https://aigcollectdash.web.app)
 
@@ -12,7 +11,7 @@ Se usa Firebase para Back End
 Para iniciar el projecto:
 
 ```bash
-$ git clone https://github.com/Kramerx/aigcollect.git
+$ git clone https://github.com/trivialbox/aigcollect.git
 $ cd aigcollect
 # instalamos las dependencias
 $ npm install
