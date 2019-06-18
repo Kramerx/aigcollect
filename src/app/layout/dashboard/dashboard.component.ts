@@ -13,19 +13,21 @@ export class DashboardComponent {
 
     displayedColumnsLevel: string[] = ['cedula', 'nombre', 'celular', 'monto', 'cobrador'];
     displayedColumnsParallel: string[] = ['cedula', 'nombre', 'celular', 'fecha'];
-    nivelesD = []
-    paralelosD = []
+    cobrosD = []
+    polizasD = []
 
-    niveles = new MatTableDataSource(this.nivelesD);
-    paralelos = new MatTableDataSource(this.paralelosD);
+    cobros = new MatTableDataSource(this.cobrosD);
+    polizas = new MatTableDataSource(this.polizasD);
 
     constructor() { }
 
     ngOnInit() {
-        this.niveles = new MatTableDataSource(this.nivelesD);
-        this.niveles.paginator = this.paginator;
-        this.paralelos = new MatTableDataSource(this.paralelosD);
-        this.paralelos.paginator = this.paginator1;
+        this.cobrosD.push({ cedula: '0123456789', nombre: 'Carlos Perez', celular: '0987654321', monto: 200, cobrador: 'Andres Andrade' })
+        this.cobros = new MatTableDataSource(this.cobrosD);
+        this.cobros.paginator = this.paginator;
+        this.polizasD.push({ cedula: '0123456789', nombre: 'Carlos Perez', celular: '0987654321', fecha:'18/06/2019' })
+        this.polizas = new MatTableDataSource(this.polizasD);
+        this.polizas.paginator = this.paginator1;
     }
 
 }

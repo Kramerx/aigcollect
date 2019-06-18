@@ -9,11 +9,9 @@ import { MatDialog } from '@angular/material';
 })
 export class ConsultComponent implements OnInit {
 
-  //variables para ordenar y paginar de la tabla
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  //variables para setear datos de la tabla
   collegeData = [];
   displayedColumns: string[] = ['cedula', 'vigencia', 'proximoPago'];
   dataSource;
@@ -21,6 +19,9 @@ export class ConsultComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.collegeData.push({ cedula: '0123456789', fechaV: '14/06/2019', fechaP: '14/07/2019'})
+    this.dataSource = new MatTableDataSource(this.collegeData);
+    this.dataSource.paginator = this.paginator;
   }
 
   // funcion para realizar la busqueda en la tabla
@@ -31,6 +32,6 @@ export class ConsultComponent implements OnInit {
   // funcion para agregar o editar
   addOrUpdate(id?: number) {
     console.log(id);
-    
+
   }
 }

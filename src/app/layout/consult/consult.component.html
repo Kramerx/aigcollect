@@ -28,7 +28,7 @@
                 <b>Cédula:</b>
               </div>
               <div class="col-6">
-                0987654321
+                0123456789
               </div>
             </div>
             <div class="row">
@@ -36,7 +36,7 @@
                 <b>Nombre:</b>
               </div>
               <div class="col-6">
-                test
+                Carlos 
               </div>
             </div>
             <div class="row">
@@ -44,7 +44,7 @@
                 <b>Apellido:</b>
               </div>
               <div class="col-6">
-                test
+                Perez
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
                 <b>Dirección:</b>
               </div>
               <div class="col-6">
-                direccion1
+                Av Americas
               </div>
             </div>
             <div class="row">
@@ -62,7 +62,7 @@
                 <b>Fecha Nacimiento:</b>
               </div>
               <div class="col-6">
-                15/06/2019
+                15/06/1990
               </div>
             </div>
             <div class="row">
@@ -70,7 +70,7 @@
                 <b>Correo:</b>
               </div>
               <div class="col-6">
-                test@gmail.com
+                cperez@gmail.com
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@
                 <b>Observaciones:</b>
               </div>
               <div class="col-6">
-                recomendaciones
+                
               </div>
             </div>
           </div>
@@ -112,15 +112,15 @@
       <table mat-table matSort [dataSource]="dataSource" class="w-100">
         <ng-container matColumnDef="cedula">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Cédula </th>
-          <td mat-cell *matCellDef="let element;"> {{element}} </td>
+          <td mat-cell *matCellDef="let element;"> {{element.cedula}} </td>
         </ng-container>
         <ng-container matColumnDef="vigencia">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de Vigencia </th>
-          <td mat-cell *matCellDef="let element"> {{element}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.fechaV}} </td>
         </ng-container>
         <ng-container matColumnDef="proximoPago">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha del proximo pago </th>
-          <td mat-cell *matCellDef="let element"> {{element}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.fechaP}} </td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
